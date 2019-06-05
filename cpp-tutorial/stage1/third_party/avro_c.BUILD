@@ -17,6 +17,6 @@ cc_library(
         ],
     ),
     hdrs = glob(["avro.h", "avro/*.h"]),
-
+    linkstatic = True,
     visibility = ["//visibility:public"],
 )
