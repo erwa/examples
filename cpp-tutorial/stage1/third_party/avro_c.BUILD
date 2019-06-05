@@ -7,7 +7,16 @@ exports_files(["LICENSE.txt"])
 
 cc_library(
     name = "avro_c",
-    srcs = glob(["*.c", "*.h"]),
+    srcs = glob(
+        [
+            "*.c",
+            "*.h"
+        ],
+        exclude = [
+            "schema_specific.c",
+        ],
+    ),
     hdrs = glob(["avro.h", "avro/*.h"]),
+
     visibility = ["//visibility:public"],
 )
